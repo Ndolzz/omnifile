@@ -1,12 +1,42 @@
 {
   "name": "omnifile",
-  "private": true,
-  "version": "1.0.0",
+  "version": "2.0.0",
+  "description": "Web app viewer file universal - Open almost anything in your browser",
   "type": "module",
+  "homepage": "https://ndolzz.github.io/omnifile/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Ndolzz/omnifile.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Ndolzz/omnifile/issues"
+  },
+  "license": "MIT",
+  "author": "Ndolzz <nueexoly@gmail.com>",
+  "keywords": [
+    "file-viewer",
+    "document-viewer",
+    "image-viewer",
+    "video-viewer",
+    "audio-player",
+    "spreadsheet-viewer",
+    "code-viewer",
+    "browser-based",
+    "offline",
+    "privacy"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "lint": "eslint src/ --ext .jsx,.js --fix",
+    "lint:check": "eslint src/ --ext .jsx,.js",
+    "format": "prettier --write src/ index.html",
+    "format:check": "prettier --check src/ index.html",
+    "type-check": "echo 'No TypeScript yet'",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "rm -rf dist node_modules",
+    "prepare": "npm install"
   },
   "dependencies": {
     "lucide-react": "^0.383.0",
@@ -17,11 +47,27 @@
     "xlsx": "^0.18.5"
   },
   "devDependencies": {
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
     "@vitejs/plugin-react": "^4.3.1",
     "autoprefixer": "^10.4.19",
+    "eslint": "^9.9.0",
+    "eslint-plugin-react": "^7.34.1",
+    "eslint-plugin-react-hooks": "^5.0.0",
+    "eslint-plugin-react-refresh": "^0.4.5",
     "gh-pages": "^6.1.1",
     "postcss": "^8.4.38",
+    "prettier": "^3.3.2",
     "tailwindcss": "^3.4.4",
     "vite": "^5.3.1"
-  }
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not op_mini all"
+  ]
 }
