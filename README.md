@@ -1,62 +1,58 @@
 # OmniFile — Open Almost Anything
 
-Web app viewer file universal (dokumen, gambar, audio, video, spreadsheet, kode) yang berjalan sepenuhnya di browser. Dibuat dengan React + Vite + Tailwind.
+<div align="center">
 
-## Cara deploy ke GitHub Pages
-
-### 1. Siapkan repo
-```bash
-# di folder omnifile ini
-git init
-git add .
-git commit -m "Initial commit: OmniFile"
 ```
-Buat repo baru di GitHub (misal `omnifile`), lalu:
-```bash
-git branch -M main
-git remote add origin https://github.com/USERNAME/omnifile.git
-git push -u origin main
+   ██████╗ ███╗   ██╗███████╗██╗███╗   ██╗ ██████╗ ███████╗
+  ██╔════╝████╗  ██║██╔════╝██║████╗  ██║██╔═══██╗██╔════╝
+  ██║     ██╔██╗ ██║█████╗  ██║██╔██╗ ██║██║   ██║███████╗
+  ██║     ██║╚██╗██║██╔══╝  ██║██║╚██╗██║██║   ██║╚════██║
+  ╚██████╗██║ ╚████║███████╗██║██║ ╚████║╚██████╔╝███████║
+   ╚═════╝╚═╝  ╚═══╝╚══════╝╚═╝╚═╝  ╚═══╝ ╚═════╝ ╚══════╝
 ```
 
-### 2. Sesuaikan `base` path
-Buka `vite.config.js`, ganti:
-```js
-base: "/omnifile/",
-```
-dengan `/nama-repo-kamu/` (harus sama persis dengan nama repo GitHub, termasuk garis miring di depan & belakang).
+**Web app viewer file universal** yang berjalan sepenuhnya di browser.
+Buka hampir semua jenis file — dokumen, spreadsheet, gambar, audio, video, kode, dan lainnya.
 
-Kalau nanti repo ini dipakai sebagai **user/organization page** (nama repo `USERNAME.github.io`), ganti `base` menjadi `"/"`.
+[![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Ready-brightgreen?logo=github)](https://ndolzz.github.io/omnifile/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![React](https://img.shields.io/badge/React-18+-61DAFB?logo=react&logoColor=white)](https://react.dev/)
+[![Vite](https://img.shields.io/badge/Vite-5+-646CFF?logo=vite&logoColor=white)](https://vitejs.dev/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3+-06B6D4?logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
 
-### 3. Aktifkan GitHub Pages via GitHub Actions
-Workflow deploy otomatis sudah disediakan di `.github/workflows/deploy.yml` — akan build & deploy setiap kamu push ke branch `main`.
+</div>
 
-Di GitHub:
-1. Buka repo → **Settings → Pages**
-2. Di bagian **Build and deployment → Source**, pilih **GitHub Actions**
-3. Push ke `main` (atau jalankan workflow manual lewat tab **Actions → Deploy to GitHub Pages → Run workflow**)
-4. Tunggu 1–2 menit, situs akan tersedia di:
-   `https://USERNAME.github.io/omnifile/`
+---
 
-### 4. Coba lokal dulu sebelum deploy (opsional tapi disarankan)
+## ✨ Fitur
+
+- **📄 Dokumen**: PDF, DOCX, TXT, Markdown, dan lainnya
+- **📊 Spreadsheet**: XLSX, CSV, ODS dengan preview tabel interaktif
+- **🖼️ Gambar**: JPG, PNG, WEBP, GIF, SVG, TIFF, AVIF
+- **🎵 Audio**: MP3, WAV, OGG, FLAC, M4A, AAC, Opus
+- **🎬 Video**: MP4, WEBM, MKV, MOV, AVI
+- **🗄️ Arsip**: ZIP, 7Z, TAR, GZ
+- **💻 Code**: Semua format kode
+
+## 🔒 Privasi
+
+✅ **100% Local** — Semua pemrosesan di browser
+✅ **Tidak ada upload** — File tidak meninggalkan perangkat
+✅ **Open Source** — Kode terbuka
+
+## 🚀 Cepat Mulai
+
+### Online
+[https://ndolzz.github.io/omnifile/](https://ndolzz.github.io/omnifile/)
+
+### Local
 ```bash
+git clone https://github.com/Ndolzz/omnifile.git
+cd omnifile
 npm install
 npm run dev
 ```
-Buka `http://localhost:5173`. Untuk cek versi production:
-```bash
-npm run build
-npm run preview
-```
 
-### Alternatif: deploy manual pakai `gh-pages` (tanpa GitHub Actions)
-```bash
-npm install
-npm run build
-npx gh-pages -d dist
-```
-Lalu di **Settings → Pages**, pilih source branch `gh-pages`.
+## 📜 Lisensi
 
-## Catatan
-- File `public/icons/icon-192.png` dan `icon-512.png` masih placeholder sederhana — ganti dengan logo asli kalau ada.
-- `manifest.json` sudah cukup untuk "Add to Home Screen" di Android/Chrome, tapi belum ada `service-worker.js` untuk mode offline penuh — bisa ditambahkan pakai plugin `vite-plugin-pwa` kalau dibutuhkan.
-- Format ODT/RTF/PPT/PPTX/ODP dan arsip ZIP/7Z/TAR belum punya viewer (belum ada library ringan yang mendukungnya di browser) — file jenis ini akan tampil sebagai "File Type Detected" dengan tombol download.
+MIT
