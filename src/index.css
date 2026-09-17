@@ -2,9 +2,125 @@
 @tailwind components;
 @tailwind utilities;
 
-html, body, #root {
-  height: 100%;
+@layer base {
+  html, body, #root {
+    height: 100%;
+  }
+  
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  *:focus-visible {
+    outline: 2px solid #4C8DFF;
+    outline-offset: 2px;
+  }
+  
+  ::selection {
+    background: rgba(76, 141, 255, 0.2);
+    color: inherit;
+  }
 }
-body {
-  margin: 0;
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center gap-1.5 px-4 py-2 rounded-lg font-medium transition-colors duration-150;
+  }
+  
+  .btn-primary {
+    @apply bg-[#4C8DFF] text-white hover:bg-[#3D7EE0] shadow-sm shadow-[#4C8DFF]/20;
+  }
+  
+  .btn-secondary {
+    @apply bg-white dark:bg-[#161B25] border border-gray-300 dark:border-[#232A38] text-gray-700 dark:text-[#E6EDF3] hover:bg-gray-50 dark:hover:bg-[#1D222C];
+  }
+  
+  .card {
+    @apply border rounded-xl p-4 transition-colors duration-150;
+  }
+  
+  .input {
+    @apply bg-transparent border border-gray-300 dark:border-[#232A38] rounded-lg px-3 py-2 text-sm outline-none transition-colors duration-150;
+  }
+  
+  .input:focus {
+    @apply border-[#4C8DFF] dark:border-[#4C8DFF];
+  }
 }
+
+@layer utilities {
+  .animate-fade-in {
+    animation: fadeIn 0.2s ease-out;
+  }
+  
+  .animate-slide-up {
+    animation: slideUp 0.3s ease-out;
+  }
+  
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .gradient-accent {
+    background: linear-gradient(135deg, #4C8DFF 0%, #3D7EE0 100%);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { 
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to { 
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.doc-content {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.doc-content h1 { font-size: 1.8rem; font-weight: 700; margin: 1.5rem 0 1rem; }
+.doc-content h2 { font-size: 1.5rem; font-weight: 600; margin: 1.25rem 0 0.75rem; }
+.doc-content h3 { font-size: 1.25rem; font-weight: 600; margin: 1rem 0 0.5rem; }
+.doc-content p { line-height: 1.7; margin: 0.75rem 0; }
+.doc-content ul { margin: 0.75rem 0; padding-left: 1.5rem; list-style: disc; }
+.doc-content ol { margin: 0.75rem 0; padding-left: 1.5rem; list-style: decimal; }
+.doc-content table { border-collapse: collapse; width: 100%; margin: 1rem 0; }
+.doc-content th, .doc-content td { border: 1px solid #e2e8f0; padding: 0.5rem; }
+.doc-content th { background: #f8fafc; font-weight: 600; }
+
+.prose { max-width: none; }
+.prose p { margin: 0.75rem 0; line-height: 1.7; }
+.prose h1 { font-size: 1.8rem; font-weight: 700; margin: 1.5rem 0 1rem; }
+.prose h2 { font-size: 1.5rem; font-weight: 600; margin: 1.25rem 0 0.75rem; }
+.prose h3 { font-size: 1.25rem; font-weight: 600; margin: 1rem 0 0.5rem; }
+.prose pre { background: #f8fafc; padding: 1rem; border-radius: 0.5rem; overflow-x: auto; margin: 1rem 0; }
+.prose code { font-family: 'JetBrains Mono', ui-monospace, monospace; }
+.prose ul { margin: 0.75rem 0; padding-left: 1.5rem; list-style: disc; }
+.prose ol { margin: 0.75rem 0; padding-left: 1.5rem; list-style: decimal; }
+
+.dark .doc-content h1, .dark .doc-content h2, .dark .doc-content h3, .dark .doc-content p, .dark .doc-content li, .dark .doc-content td, .dark .doc-content th { color: #E6EDF3; }
+.dark .doc-content table { border-color: #232A38; }
+.dark .doc-content th { background: #161B25; }
+.dark .doc-content th, .dark .doc-content td { border-color: #232A38; }
+
+button { transition: all 0.15s ease; border: none; background: none; cursor: pointer; }
+
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+.dark ::-webkit-scrollbar-thumb { background: #475569; }
+.dark ::-webkit-scrollbar-thumb:hover { background: #64748b; }
