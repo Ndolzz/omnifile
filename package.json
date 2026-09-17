@@ -34,7 +34,7 @@
     "format": "prettier --write src/ index.html",
     "format:check": "prettier --check src/ index.html",
     "type-check": "echo 'No TypeScript yet'",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "echo 'No test specified' && exit 0",
     "clean": "rm -rf dist node_modules"
   },
   "dependencies": {
