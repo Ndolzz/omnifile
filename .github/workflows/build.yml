@@ -92,10 +92,10 @@ jobs:
       
       - name: Check for console statements
         run: |
-          echo "Checking for console statements..."
-          grep -r "console\." src/ --include="*.jsx" --include="*.js" 2>/dev/null || echo "No console statements found"
+          echo "Checking for console statements in source files"
+          grep -r "console." src/ --include="*.jsx" --include="*.js" 2>/dev/null || echo "No console statements found"
       
       - name: Check for debug code
         run: |
-          echo "Checking for debug code..."
-          grep -r "debugger\|DEBUG\|debug" src/ --include="*.jsx" --include="*.js" 2>/dev/null || echo "No debug code found"
+          echo "Checking for debug code"
+          grep -r "debugger|DEBUG|debug" src/ --include="*.jsx" --include="*.js" 2>/dev/null || echo "No debug code found"
