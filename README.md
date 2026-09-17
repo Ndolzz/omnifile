@@ -1,5 +1,6 @@
 # OmniFile - Open Almost Anything
 
+
 <div align="center">
 
 OmniFile
@@ -41,62 +42,6 @@ Local
     npm run dev
 
 Buka http://localhost:5173 di browser
-
-## Struktur Project
-
-omnifile
-public
-  icons
-  manifest.json
-src
-  App.jsx
-  index.css
-  main.jsx
-.github
-  workflows
-    build.yml
-    deploy.yml
-index.html
-package.json
-tailwind.config.js
-vite.config.js
-README.md
-
-## Tech Stack
-
-Frontend: React 18 + Vite 5
-Styling: Tailwind CSS 3
-Icons: Lucide React
-Docx: Mammoth.js
-Spreadsheet: SheetJS (xlsx)
-CSV: Papa Parse
-Build: Vite + GitHub Actions
-
-## Fitur UI
-
-Dark/Light Mode - Toggle tema dengan mudah
-Drag and Drop - Seret file langsung ke area upload
-Multiple Files - Buka banyak file sekaligus
-Responsive - Tampilan optimal di desktop dan mobile
-File Information Panel - Lihat detail file yang dibuka
-
-## Troubleshooting
-
-File tidak bisa dibuka
-Pastikan format file didukung
-Coba refresh browser
-Pastikan file tidak rusak
-
-Deploy gagal
-Pastikan base di vite.config.js sudah benar
-Pastikan workflow GitHub Actions sudah enabled
-Cek logs di tab Actions
-
-Build error
-
-    rm -rf node_modules package-lock.json
-    npm install
-    npm run build
 
 ## Lisensi
 
