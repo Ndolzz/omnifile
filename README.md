@@ -1,58 +1,123 @@
-# OmniFile — Open Almost Anything
+# OmniFile - Open Almost Anything
 
 <div align="center">
 
-```
-   ██████╗ ███╗   ██╗███████╗██╗███╗   ██╗ ██████╗ ███████╗
-  ██╔════╝████╗  ██║██╔════╝██║████╗  ██║██╔═══██╗██╔════╝
-  ██║     ██╔██╗ ██║█████╗  ██║██╔██╗ ██║██║   ██║███████╗
-  ██║     ██║╚██╗██║██╔══╝  ██║██║╚██╗██║██║   ██║╚════██║
-  ╚██████╗██║ ╚████║███████╗██║██║ ╚████║╚██████╔╝███████║
-   ╚═════╝╚═╝  ╚═══╝╚══════╝╚═╝╚═╝  ╚═══╝ ╚═════╝ ╚══════╝
-```
+OmniFile
+Web app viewer file universal yang berjalan sepenuhnya di browser
+Buka hampir semua jenis file
 
-**Web app viewer file universal** yang berjalan sepenuhnya di browser.
-Buka hampir semua jenis file — dokumen, spreadsheet, gambar, audio, video, kode, dan lainnya.
-
-[![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Ready-brightgreen?logo=github)](https://ndolzz.github.io/omnifile/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-[![React](https://img.shields.io/badge/React-18+-61DAFB?logo=react&logoColor=white)](https://react.dev/)
-[![Vite](https://img.shields.io/badge/Vite-5+-646CFF?logo=vite&logoColor=white)](https://vitejs.dev/)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3+-06B6D4?logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
+[GitHub Pages](https://ndolzz.github.io/omnifile/)
+[License MIT](https://opensource.org/licenses/MIT)
 
 </div>
 
----
 
-## ✨ Fitur
+## Fitur
 
-- **📄 Dokumen**: PDF, DOCX, TXT, Markdown, dan lainnya
-- **📊 Spreadsheet**: XLSX, CSV, ODS dengan preview tabel interaktif
-- **🖼️ Gambar**: JPG, PNG, WEBP, GIF, SVG, TIFF, AVIF
-- **🎵 Audio**: MP3, WAV, OGG, FLAC, M4A, AAC, Opus
-- **🎬 Video**: MP4, WEBM, MKV, MOV, AVI
-- **🗄️ Arsip**: ZIP, 7Z, TAR, GZ
-- **💻 Code**: Semua format kode
+Dokumen: PDF, DOCX, TXT, Markdown
+Spreadsheet: XLSX, CSV, ODS dengan preview tabel interaktif
+Gambar: JPG, PNG, WEBP, GIF, SVG, TIFF, AVIF
+Audio: MP3, WAV, OGG, FLAC, M4A, AAC, Opus
+Video: MP4, WEBM, MKV, MOV, AVI
+Arsip: ZIP, 7Z, TAR, GZ
+Code: Semua format kode
 
-## 🔒 Privasi
+## Privasi
 
-✅ **100% Local** — Semua pemrosesan di browser
-✅ **Tidak ada upload** — File tidak meninggalkan perangkat
-✅ **Open Source** — Kode terbuka
+100 Local - Semua pemrosesan di browser
+Tidak ada upload - File tidak meninggalkan perangkat
+Open Source - Kode terbuka
 
-## 🚀 Cepat Mulai
+## Cepat Mulai
 
-### Online
+Online
 [https://ndolzz.github.io/omnifile/](https://ndolzz.github.io/omnifile/)
 
-### Local
-```bash
-git clone https://github.com/Ndolzz/omnifile.git
-cd omnifile
-npm install
-npm run dev
-```
+Local
 
-## 📜 Lisensi
+    git clone https://github.com/Ndolzz/omnifile.git
+    cd omnifile
+    npm install
+    npm run dev
 
-MIT
+Buka http://localhost:5173 di browser
+
+## Struktur Project
+
+omnifile
+public
+  icons
+  manifest.json
+src
+  App.jsx
+  index.css
+  main.jsx
+.github
+  workflows
+    build.yml
+    deploy.yml
+index.html
+package.json
+tailwind.config.js
+vite.config.js
+README.md
+
+## Tech Stack
+
+Frontend: React 18 + Vite 5
+Styling: Tailwind CSS 3
+Icons: Lucide React
+Docx: Mammoth.js
+Spreadsheet: SheetJS (xlsx)
+CSV: Papa Parse
+Build: Vite + GitHub Actions
+
+## Fitur UI
+
+Dark/Light Mode - Toggle tema dengan mudah
+Drag and Drop - Seret file langsung ke area upload
+Multiple Files - Buka banyak file sekaligus
+Responsive - Tampilan optimal di desktop dan mobile
+File Information Panel - Lihat detail file yang dibuka
+
+## Troubleshooting
+
+File tidak bisa dibuka
+Pastikan format file didukung
+Coba refresh browser
+Pastikan file tidak rusak
+
+Deploy gagal
+Pastikan base di vite.config.js sudah benar
+Pastikan workflow GitHub Actions sudah enabled
+Cek logs di tab Actions
+
+Build error
+
+    rm -rf node_modules package-lock.json
+    npm install
+    npm run build
+
+## Lisensi
+
+MIT License - Bebas digunakan, dimodifikasi, dan didistribusikan
+
+## Kontribusi
+
+Kontribusi selalu diterima
+Issue - untuk melaporkan bug atau request fitur
+Pull Request - untuk kontribusi kode
+
+## Terima Kasih
+
+React - Library UI
+Vite - Build tool
+Tailwind CSS - CSS framework
+Lucide - Icons
+Mammoth.js - DOCX to HTML
+SheetJS - Spreadsheet parsing
+Papa Parse - CSV parsing
+
+
+Dibuat oleh [Ndolzz](https://github.com/Ndolzz)
+Open almost anything, anywhere
