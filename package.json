@@ -15,7 +15,7 @@
   "author": "Ndolzz <nueexoly@gmail.com>",
   "keywords": [
     "file viewer",
-    "document viewer",
+    "document viewer", 
     "image viewer",
     "video viewer",
     "audio player",
@@ -33,8 +33,8 @@
     "lint:check": "eslint src/ --ext .jsx,.js",
     "format": "prettier --write src/ index.html",
     "format:check": "prettier --check src/ index.html",
-    "type-check": "echo 'No TypeScript yet'",
-    "test": "echo 'No test specified' && exit 0",
+    "type-check": "echo \'No TypeScript yet\'",
+    "test": "echo \'No test specified\' && exit 0",
     "clean": "rm -rf dist node_modules"
   },
   "dependencies": {
